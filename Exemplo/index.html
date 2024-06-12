@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Internet e Redes</h1>
+        <nav>
+            <ul>
+                <li><a href="#secao1">IPv6</a></li>
+                <li><a href="#secao2">Ethernet</a></li>
+                <li><a href="#secao3">TCP/UDP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="secao1">
+            <h2>IPv6</h2>
+            <div class="conteudo">
+                <p>Os endereços IPv6 foram criados com 128 bits de comprimento e nele é utilizado a notação hexadecimal, para facilitar a leitura dos endereços.</p>
+                <p>O protocolo IPv6 possui 3 tipos de endereçamento, são eles:</p>
+                <ul>
+                    <li><b>UNICAST-</b>  Os endereços IPv6 Unicast se caracterizam por identificar unicamente uma interface de
+                        rede. Por isso, um pacote enviado à um endereço IPv6 Unicast vai ser entregue à uma única
+                        interface em todo o escopo do endereçamento IPv6.</li><br>
+                    <li><b>MULTICAST-</b> Um endereço IPv6 Multicast é um endereço IP que designa um grupo de interfaces. Os pacotes enviados à um endereço multicast serão entregues a todos os endereços que compõe o
+                        grupo.</li><br>
+                    <li><b>ANYCAST-</b> Um endereço Anycast é utilizado para identificar um grupo de interfaces, mas
+                        diferente do Multicast, o pacote destinado à um endereço Anycast é entregue somente à interface
+                        mais próxima da origem</li>
+                    <img src="imagens/glossario.png" alt="some text" width="300" height="200">
+                </ul>
+                <p>Para aprender mais sobre o IPv6, acesse os seguintes recursos:</p>
+                <ul>
+                    <li><a href="https://www.eletronet.com/blog/ipv6-o-que-e-como-funciona/#:~:text=O%20que%20%C3%A9%20o%20protocolo,rede%20ou%20em%20redes%20externas.">Tudo sobre o IPv6</a></li>
+                    <li><a href="https://almeida-cma.github.io/TRAB_GLOSSARIO/">Glossário</a></li>
+                    <li><a href="https://github.com/MatheusCoelh/REDES_T5">Arquivo para carregar no Glossário</a></li>
+                </ul>
+            </div>
+            <div class="desafio">
+                <h3>Desafio</h3>
+                <p>Quantos bits tem o IPv6?</p>
+                <input type="text" id="respostaDesafio1">
+                <button onclick="verificarResposta1()">Verificar Resposta</button>
+            </div>
+        </section>
+
+        <section id="secao2">
+            <h2>Ethernet </h2>
+            <div class="conteudo">
+                <p>Redes Ethernet são aquelas que utilizam cabos de par trançado para transmitir dados. Em contraste,
+                    as redes que não utilizam cabos são denominadas redes wireless ou redes sem fio.</p>
+                <p>Existem três padrões importantes na rede Ethernet que são:</p>
+                <ul>
+                    <li><b>10Base-T - 10 Megabit</b></li>
+                    <li><b>100Base-TX - 100 Megabit</b></li>
+                    <li><b>1000Base-T - 1000 Megabit</b></li>
+                <p>Atualmente, existem diversos padrões Ethernet que é importante conhecer, pois eles não se
+                    limitam apenas a cabos de par trançado, mas também incluem fibras ópticas e outros meios de
+                    transmissão.</p>
+                    <h3><b>Padrões Ethernet para Fibra Óptica</b></h3>
+                    <li><b>100Base-FX</b></li>
+                    <li><b>1000Base-SX</b></li>
+                    <li><b>1000Base-LX</b></li>
+                    <li><b>10GBase-SR</b></li>
+                    <li><b>10GBase-LR</b></li>
+                    <li><b>40GBase-SR4</b></li>
+                    <li><b>Entre outros;</b></li>
+                    
+                </ul>
+                <img src="imagens/Captura de tela 2024-06-12 165558.png" alt="some text" width="300" height="200">
+                <p>Para aprender mais sobre a Ethernet, acesse os seguintes recursos:</p>
+                <ul>
+                    <li><a href="https://blog.kalatec.com.br/ethernet/#:~:text=A%20Ethernet%20%C3%A9%20um%20meio,com%20performance%20em%20tempo%20real.">Tudo sobre Ethernet</a></li>
+                    <li><a href="https://github.com/Giovannasouza23/Ethernet/tree/main/REDES_T6/PEthernet">Arquivo com exemplo</a></li>
+                </ul>
+            </div>
+            <div class="desafio">
+                <h3>Desafio</h3>
+                <p>Qual é o tipo de cabo Ethernet mais comum usado em residências?</p>
+                <select id="respostaDesafio2">
+                    <option value="incorreto">Selecione uma opção</option>
+                    <option value="cabo-coaxial">Cabo Coaxial</option>
+                    <option value="cabo-par-trançado">Cabo Par Trançado</option>
+                    <option value="fibra-optica">Fibra Óptica</option>
+                </select>
+                <button onclick="verificarResposta2()">Verificar Resposta</button>
+            </div>
+        </section>
+
+        <section id="secao3">
+            <h2>TCP/UDP</h2>
+            <div class="conteudo">
+                <p>Atualmente os computadores necessitam ter protocolos para possibilitar a conexão entre si, entre
+                    diversos protocolos que existam hoje em dia, dois se destacam pela sua importância e usabilidade
+                    que são o TCP (Transmission Control Protocol) e o UDP (User Datagram Protocol).</p>
+                <p>O TCP oferece entrega confiável de dados, o que significa que os dados são garantidos para chegar ao destino na ordem correta. O UDP não oferece entrega confiável de dados, mas é mais rápido e eficiente.</p>
+                <p>A escolha entre TCP e UDP depende do aplicativo específico. Alguns aplicativos, como e-mail e transferência de arquivos, exigem entrega confiável de dados, portanto, TCP é a melhor opção. Outros aplicativos, como VoIP e streaming de vídeo, não exigem entrega confiável de dados e podem se beneficiar da maior velocidade e eficiência do UDP.</p>
+                <p>Para aprender mais sobre TCP e UDP, acesse os seguintes recursos:</p>
+                <ul>
+                    <li><a href="https://www.fortinet.com/br/resources/cyberglossary/tcp-ip#:~:text=O%20protocolo%20de%20controle%20de,dados%20e%20mensagens%20nas%20redes.">Tudo sobre o TCP</a></li>
+                    <li><a href="https://www.cloudflare.com/pt-br/learning/ddos/glossary/user-datagram-protocol-udp/#:~:text=O%20User%20Datagram%20Protocol%2C%20ou,que%20os%20dados%20sejam%20transferidos.">Tudo sobre o UDP</a></li>
+                    <li><a href="https://www.exitlag.com/knowledgebase/80/Qual-a-diferenca-entre-as-rotas-TCP-e-UDP.html?language=portuguese-br&gad_source=1&gclid=EAIaIQobChMI5c_Ag9_WhgMV5VRIAB03tAoCEAAYASAAEgJ5vfD_BwE">A diferença dos dois</a></li>
+                </ul>
+            </div>
+            <div class="desafio">
+                <h3>Desafio</h3>
+                <p>Qual protocolo é mais adequado para um aplicativo de chat online?</p>
+                <select id="respostaDesafio3">
+                    <option value="incorreto">Selecione uma opção</option>
+                    <option value="tcp">TCP</option>
+                    <option value="udp">UDP</option>
+                </select>
+                <button onclick="verificarResposta3()">Verificar Resposta</button>
+            </div>
+        </section>
+
+        <section id="secao4"><h2>Acertos</h2>
+            <div class="jogo"></div>
+            <div class="quadro-recompensas">
+                <ul id="recompensas">
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Redes - Feito por Giovanna Esther e Matheus Coelho</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
